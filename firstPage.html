@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+    <title>First Page of the calendar website</title>
+    
+    <link rel="stylesheet" type="text/css" href="firstPage.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: powderblue;
+            font-family: "Times New Roman", Times, serif;
+            color: #001000;
+            text-align: center;
+        }
+        div{
+            margin: auto;
+        }
+        input[type=button], input[type=submit], input[type=reset], input[type=hidden] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 4px 6px;
+            text-decoration: none;
+            margin: 2px 2px;
+            cursor: pointer;
+        }
+        input[type=text]:focus {
+            border: 3px solid #555;
+        }
+        button[type=submit] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 4px 6px;
+            text-decoration: none;
+            margin: 2px 2px;
+            cursor: pointer;
+        }        
+    </style>
+</head>
+<body>
+    <h2>Welcome to the website ! </h2>
+    Current Time is 
+    <div id = "currenttime">
+            <script>
+                document.getElementById("currenttime").innerHTML = displayTime();
+    
+                function displayTime() {
+                var date = new Date(),
+                minutes = date.getMinutes().toString().length == 1 ? '0'+date.getMinutes() : date.getMinutes(),
+                hours = date.getHours().toString().length == 1 ? '0'+date.getHours() : date.getHours(),
+                ampm = date.getHours() >= 12 ? 'pm' : 'am',
+                months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+                days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+            
+                return days[date.getDay()]+' '+months[date.getMonth()]+' '+date.getDate()+' '+date.getFullYear()+' '+hours+':'+minutes+ampm;}
+                </script>
+        </div>
+    <h3 id="logined_user"></h3>
+    
+    <label><input type="submit" id="logout" name="logout"  value="Log out" style="display: none"></label>
+    
+    <div class="verification" id="login">
+            <label><strong>Username:</strong>
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+            <button id="login_btn">Log In</button>
+    </div>
+
+    <div class="verification" id="register">
+            <label><strong>New User Name:</strong>
+            <input type="text" id="new_username" placeholder="Type new username"> </label>
+            <input type="password" id="new_password" placeholder="Type new password"></label>
+            <button id="register_btn">Register</button>
+    </div>
+    <br><br>
+    <div class="display_control" id="display_control">
+        <h3 id="month_alert"></h3>
+<!--        <form> -->
+            <button id="prev_month_btn">Prev Month</button>
+            <button id="next_month_btn">Next Month</button>
+<!--        </form> -->
+        <h3 id="currentmonth" class="currentmonth"></h3>
+    </div>
+    <!-- Refered from the below link to decorate the calendar:
+    https://getbootstrap.com/docs/4.0/content/tables/ -->
+    <div id ="calendar">
+        <table class="table table-hover table-bordered table-dark">
+            <thead class="thead-gray">
+                <tr>
+                    <th scope="col">Sunday</th>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>                   
+                    <th scope="col">Saturday</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr id ="week0">
+                    <td id="day1"> </td>
+                    <td id="day2"> </td>
+                    <td id="day3"> </td>
+                    <td id="day4"> </td>
+                    <td id="day5"> </td>
+                    <td id="day6"> </td>
+                    <td id="day7"> </td>
+                </tr>
+                <tr id ="week1">
+                    <td id="day8"> </td>
+                    <td id="day9"> </td>
+                    <td id="day10"> </td>
+                    <td id="day11"> </td>
+                    <td id="day12"> </td>
+                    <td id="day13"> </td>
+                    <td id="day14"> </td>                  
+                </tr>
+                <tr id ="week2">
+                    <td id="day15"> </td>
+                    <td id="day16"> </td>
+                    <td id="day17"> </td>
+                    <td id="day18"> </td>
+                    <td id="day19"> </td>
+                    <td id="day20"> </td>
+                    <td id="day21"> </td>                  
+                </tr>
+                <tr id ="week3">
+                    <td id="day22"> </td>
+                    <td id="day23"> </td>   
+                    <td id="day24"> </td>
+                    <td id="day25"> </td>
+                    <td id="day26"> </td>
+                    <td id="day27"> </td>
+                    <td id="day28"> </td>                  
+                </tr>
+                <tr id ="week4">
+                    <td id="day29"> </td>
+                    <td id="day30"> </td>
+                    <td id="day31"> </td>
+                    <td id="day32"> </td>
+                    <td id="day33"> </td>
+                    <td id="day34"> </td>
+                    <td id="day35"> </td>                  
+                </tr>
+                <tr id ="week5"> <!--There could be a case where 6 weeks are available. -->
+                    <td id="day36"> </td>
+                    <td id="day37"> </td>
+                    <td id="day38"> </td>
+                    <td id="day39"> </td>
+                    <td id="day40"> </td>
+                    <td id="day41"> </td>
+                    <td id="day42"> </td>                  
+                </tr>                  
+            </tbody>
+        </table>    
+    </div>
+    <div class = "loadEvent">
+            <button id = "load_event" name = "Load Button" align = "right">Load events you scheduled!</button>
+    </div>
+    <div id = "schedules" align = "left">
+    </div>
+     <!-- DK added 21 OCT to create addEvent Button -->
+     <div class = "addEvent">
+            <form onsubmit = "return false;" id = "event_content">
+                <strong>Add Event : </strong>
+                <br>
+                <strong>Year :</strong>
+                <input type = "number" id = "event_year" name = "event_year" required>
+                <strong>Month :</strong>
+                <input type = "number" id = "event_month" name = "event_month" step="1" min="1" max="12" required>
+                <!-- still need to limit the input to 1~31 -->
+                <input type = "number" id = "event_day" name = "event_day" step="1" min="1" max="31"required>
+                
+                <label>Event Time:
+                        <input type="number" id ="event_hour" name="event_hour" min="0" max="23" value="00" placeholder="Hour">
+                        <input type="number" id ="event_minute" name="event_minute" min="00" max="59" value="00" placeholder="Minute">
+                </label>
+                <br>
+                <strong>Content :</strong>
+                <textarea id = "event_title" name = "event_title" required placeholder="Write your event here"></textarea>
+                <br>
+                <strong>Category :</strong>
+                <select id = "event_category" name = "Category">
+                    <option value = "Work">Work</option>
+                    <option value = "Home">Home</option>
+                    <option value = "Social">Social</option>
+                </select>   
+                <br>
+                <label>Share with :
+                    <input type="text" id ="shared_username" name="shared_username" placeholder="Other Username">
+                </label>
+            
+                <button id = "submit" name = "Create Event">Create Event!</button>
+                <input type = "reset" name = "Reset">
+            </form>
+    
+        </div>
+
+        <div class = "deleteEvent">
+            <input type = "text" id ="event_delete" placeholder="write an event you want to delete here" style="width: 250px">
+            <button id = "event_delete_button" name = "Delete Button">Delete Event</button>
+        </div>
+
+        <br>
+        <br>
+        <div class = "editEvent">
+            <input type = "text" id = "original_event_name" placeholder ="write an event to edit" style = "width: 200px">
+            <input type = "text" id = "edit_event_name" placeholder = "write the new name of the event" style = "width: 200px">
+            <button id = "event_edit_button" name = "edit Button">Edit Event</button>
+        </div>
+
+
+    <script type="text/javascript" src="login_ajax2.js"></script> <!-- load the JavaScript file -->    
+    <script type="text/javascript" src="register_ajax.js"></script>
+    <script type="text/javascript" src="logout_ajax.js"></script>
+    <script type="text/javascript" src="CalendarHelper.js"></script>
+    <script type="text/javascript" src="displayCalendar.js"></script>
+    <script type="text/javascript" src="createevent.js"></script>
+    <script type="text/javascript" src="deleteevent.js"></script>
+    <script type="text/javascript" src="getevent.js"></script>
+    <script type="text/javascript" src="pageReload.js"></script>
+    <script type="text/javascript" src="editevent.js"></script>
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+</body>
+</html>
