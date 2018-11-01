@@ -1,13 +1,13 @@
 # Web-Calendar
 ## Author: Hong Wi, DK Kim
 
-Our web calendar allows users to add and delete their schedules on the calendar.
+Our web calendar allows users to add and delete their events on the calendar.
 
 ### [Link to the calendar]: <http://ec2-18-223-116-26.us-east-2.compute.amazonaws.com/~donggyukim/GROUPTEST/firstPage.html>
    
 ### Brief summary of what we did
 - We created a calendar website. Sample user id and user password.
-- (Hong Wi) I made MySQL database, login, register, displaying the calendar, and adding schedules on the calendar. 
+- (Hong Wi) I made MySQL database, login, register, displaying the calendar, and adding events on the calendar. 
 - I tried to use fetch API to every function since fetch API is definitely preferred to XMLHttpRequest.
 - Deleting and sharing shcedules were made by DK Kim. 
 
