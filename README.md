@@ -14,5 +14,9 @@ Our web calendar allows users to add and delete their events on the calendar.
 ### Login Information
 - (Username: dk) 
 - (Password: 1234) 
-- You may use the above information to log in. If you wish to create your own, you mgiht do so. After you log in, there are multiple functions you can enjoy. - First, you can view calendar. - Second, you can view previous month and next month. - Third, you can control event systems. Finally, if you want to log out the website, you can simply click logout button. After you delete an event, you have to refresh and load events to see.
+- You may use the above information to log in. If you wish to create your own, you mgiht do so. After you log in, there are multiple functions you can enjoy. 
+- First, you can view calendar. 
+- Second, you can view previous month and next month. 
+- Third, you can control event systems. 
+- Finally, if you want to log out the website, you can simply click logout button. After you delete an event, you have to refresh and load events to see.
 
