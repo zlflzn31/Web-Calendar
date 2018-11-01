@@ -11,7 +11,7 @@ Our web calendar allows users to add and delete their events on the calendar.
 - I tried to use fetch API to every function since fetch API is definitely preferred to XMLHttpRequest.
 - Deleting and sharing shcedules were made by DK Kim. 
 
-### Login Information
+### Login Information & Usage
 - (Username: dk) 
 - (Password: 1234) 
 - You may use the above information to log in. If you wish to create your own, you mgiht do so. After you log in, there are multiple functions you can enjoy. 
