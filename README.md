@@ -4,8 +4,7 @@
 Our web calendar allows users to add and delete their schedules on the calendar.
 
 ## Additional details:
-Below are the links I am supposed to attach.
-[Link to the calendar]: http://ec2-18-223-116-26.us-east-2.compute.amazonaws.com/~donggyukim/GROUPTEST/firstPage.html
+... [Link to the calendar]: http://ec2-18-223-116-26.us-east-2.compute.amazonaws.com/~donggyukim/GROUPTEST/firstPage.html
 
 ### Brief summary of what we did
 We created a calendar website. Sample user id and user password.
