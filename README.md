@@ -5,6 +5,7 @@
 Our web calendar allows users to add and delete their events on the calendar.
 
 ### [Link to the calendar]: <http://ec2-18-223-116-26.us-east-2.compute.amazonaws.com/~donggyukim/GROUPTEST/firstPage.html>
+- I stopped running EC2 instance since my free tier is done. You won't be able to access to the website. 
 
 ### What we learned
 
